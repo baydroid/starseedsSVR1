@@ -1,0 +1,36 @@
+[Unit]
+Description=Starseeds node.js utility server for swapwidget etc. 
+
+[Service]
+# Start Service and Examples
+ExecStart=/usr/bin/node /home/starseeds/starseedsSVR1/express.js
+# Options Stop and Restart
+# ExecStop=
+# ExecReload=
+# WorkingDirectory is required on some systems, including Fedora.
+WorkingDirectory=/home/starseeds/starseedsSVR1
+# Restart service after 10 seconds if node service crashes
+RestartSec=10
+# Restart=always
+Restart=on-failure
+# Output to syslog
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=starseeds-nodejs
+# #### please, not root users
+# RHEL/Fedora uses 'nobody'
+# User=nouser
+User=nobody
+# Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
+# Group=nogroup
+Group=nobody
+# variables
+Environment=PATH=/usr/bin:/usr/local/bin
+# Replace ef9apopzq9qrgntjubojbxe7hy4z5eez with the real api key. ef9apopzq9qrgntjubojbxe7hy4z5eez is just a developers test key published on Dodo's website.
+Environment=DODOEX_WIDGET_API_KEY=ef9apopzq9qrgntjubojbxe7hy4z5eez
+# See https://docs.dodoex.io/english/developer-portal/swap-widget/profit-sharing-instructions for instructions on the use of DODOEX_WIDGET_FEE_RATE and DODOEX_WIDGET_REBATE_ADDRESS.
+Environment=DODOEX_WIDGET_FEE_RATE=0
+Environment=DODOEX_WIDGET_REBATE_ADDRESS=0x0000000000000000000000000000000000000000
+
+[Install]
+WantedBy=multi-user.target
