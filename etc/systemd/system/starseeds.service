@@ -14,16 +14,16 @@ RestartSec=10
 # Restart=always
 Restart=on-failure
 # Output to syslog
-StandardOutput=syslog
+StandardOutput=journal
 StandardError=syslog
 SyslogIdentifier=starseeds-nodejs
 # #### please, not root users
 # RHEL/Fedora uses 'nobody'
 # User=nouser
-User=nobody
+User=nginx
 # Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
 # Group=nogroup
-Group=nobody
+Group=nginx
 # variables
 Environment=PATH=/usr/bin:/usr/local/bin
 # Replace ef9apopzq9qrgntjubojbxe7hy4z5eez with the real api key. ef9apopzq9qrgntjubojbxe7hy4z5eez is just a developers test key published on Dodo's website.
