@@ -898,7 +898,7 @@ const TOKEN_LIST = [
 
 
 
-alert(`API_KEY = ${ API_KEY }`);
+//alert(`API_KEY = ${ API_KEY }`);
 if (FEE_RATE && REBATE_ADDRESS)
     {
     InitSwapWidget
