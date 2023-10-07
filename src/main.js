@@ -4,9 +4,9 @@ import { InitSwapWidget } from '@dodoex/widgets';
 
 
 // const API_KEY = 'ef9apopzq9qrgntjubojbxe7hy4z5eez'; // This is a developer's test api key published on Dodo's website.
-const API_KEY        = process.env.DODOEX_WIDGET_API_KEY ? process.env.DODOEX_WIDGET_API_KEY : "";
-const FEE_RATE       = process.env.DODOEX_WIDGET_FEE_RATE ? Number.parseInt(process.env.DODOEX_WIDGET_FEE_RATE) : 0;
-const REBATE_ADDRESS = process.env.DODOEX_WIDGET_REBATE_ADDRESS ? process.env.DODOEX_WIDGET_REBATE_ADDRESS : "";
+const API_KEY        = window.starseedsSwapWidget.API_KEY;
+const FEE_RATE       = window.starseedsSwapWidget.FEE_RATE;
+const REBATE_ADDRESS = window.starseedsSwapWidget.REBATE_ADDRESS;
 
 
 
@@ -898,6 +898,7 @@ const TOKEN_LIST = [
 
 
 
+alert(`API_KEY = ${ API_KEY }`);
 if (FEE_RATE && REBATE_ADDRESS)
     {
     InitSwapWidget
