@@ -26,11 +26,38 @@ User=nginx
 Group=nginx
 # variables
 Environment=PATH=/usr/bin:/usr/local/bin
+
+
+
+# API key, fee rate & rebate address for widget A
+
 # Replace ef9apopzq9qrgntjubojbxe7hy4z5eez with the real api key. ef9apopzq9qrgntjubojbxe7hy4z5eez is just a developers test key published on Dodo's website.
-Environment=DODOEX_WIDGET_API_KEY=ef9apopzq9qrgntjubojbxe7hy4z5eez
-# See https://docs.dodoex.io/english/developer-portal/swap-widget/profit-sharing-instructions for instructions on the use of DODOEX_WIDGET_FEE_RATE and DODOEX_WIDGET_REBATE_ADDRESS.
-Environment=DODOEX_WIDGET_FEE_RATE=0
-Environment=DODOEX_WIDGET_REBATE_ADDRESS=0x0000000000000000000000000000000000000000
+Environment=WIDGET_API_KEY_A=ef9apopzq9qrgntjubojbxe7hy4z5eez
+# See https://docs.dodoex.io/english/developer-portal/swap-widget/profit-sharing-instructions for instructions on the use of WIDGET_FEE_RATE and WIDGET_REBATE_ADDRESS.
+Environment=WIDGET_FEE_RATE_A=0
+Environment=WIDGET_REBATE_ADDRESS_A=0x0000000000000000000000000000000000000000
+
+
+
+# API key, fee rate & rebate address for widget B
+
+# Replace ef9apopzq9qrgntjubojbxe7hy4z5eez with the real api key. ef9apopzq9qrgntjubojbxe7hy4z5eez is just a developers test key published on Dodo's website.
+Environment=WIDGET_API_KEY_B=ef9apopzq9qrgntjubojbxe7hy4z5eez
+# See https://docs.dodoex.io/english/developer-portal/swap-widget/profit-sharing-instructions for instructions on the use of WIDGET_FEE_RATE and WIDGET_REBATE_ADDRESS.
+Environment=WIDGET_FEE_RATE_B=0
+Environment=WIDGET_REBATE_ADDRESS_B=0x0000000000000000000000000000000000000001
+
+
+
+# API key, fee rate & rebate address for widget C
+
+# Replace ef9apopzq9qrgntjubojbxe7hy4z5eez with the real api key. ef9apopzq9qrgntjubojbxe7hy4z5eez is just a developers test key published on Dodo's website.
+Environment=WIDGET_API_KEY_C=ef9apopzq9qrgntjubojbxe7hy4z5eez
+# See https://docs.dodoex.io/english/developer-portal/swap-widget/profit-sharing-instructions for instructions on the use of WIDGET_FEE_RATE and WIDGET_REBATE_ADDRESS.
+Environment=WIDGET_FEE_RATE_C=0
+Environment=WIDGET_REBATE_ADDRESS_C=0x0000000000000000000000000000000000000002
+
+
 
 [Install]
 WantedBy=multi-user.target

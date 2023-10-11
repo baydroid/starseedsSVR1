@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --node-env production --config=webpack/prod.js --progress",
-    "run": "DODOEX_WIDGET_API_KEY=ef9apopzq9qrgntjubojbxe7hy4z5eez DODOEX_WIDGET_FEE_RATE=0 DODOEX_WIDGET_REBATE_ADDRESS=0x0000000000000000000000000000000000000000 node express.js",
+    "run": "WIDGET_API_KEY_A=ef9apopzq9qrgntjubojbxe7hy4z5eez WIDGET_FEE_RATE_A=0 WIDGET_REBATE_ADDRESS_A=0x0000000000000000000000000000000000000000 WIDGET_API_KEY_B=ef9apopzq9qrgntjubojbxe7hy4z5eez WIDGET_FEE_RATE_B=0 WIDGET_REBATE_ADDRESS_B=0x0000000000000000000000000000000000000001 WIDGET_API_KEY_C=ef9apopzq9qrgntjubojbxe7hy4z5eez WIDGET_FEE_RATE_C=0 WIDGET_REBATE_ADDRESS_C=0x0000000000000000000000000000000000000002 node express.js",
     "start": "npm run build && npm run run"
   },
   "dependencies": {
