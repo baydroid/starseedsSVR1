@@ -173,7 +173,7 @@ export const TOKEN_LIST_STARSEEDS_CURRENT = [
     },
     {
     chainId: CHAIN_ID_POLYGON,
-    address: '0x6f905c09266D62f67adc09d3ED3De95134B5470C',
+    address: '0xaDE807faF03Dd75D7c8a44F0baD85999C18cf2F9',
     name: 'STARv2 StarSeeds Protocol',
     decimals: 18,
     symbol: 'STARv2',
